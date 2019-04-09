@@ -15,6 +15,7 @@
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <mysql.version>5.1.40</mysql.version>
     </properties>
 
 
@@ -103,7 +104,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.40</version>
+            <version>${mysql.version}</version>
         </dependency>
 
         <dependency>
