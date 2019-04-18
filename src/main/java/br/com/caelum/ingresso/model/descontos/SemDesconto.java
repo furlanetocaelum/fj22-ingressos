@@ -9,4 +9,9 @@ public class SemDesconto implements Desconto {
 		return valorOriginal;
 	}
 
+	@Override
+	public String getDescricao() {
+		return "Inteiro";
+	}
+
 }
