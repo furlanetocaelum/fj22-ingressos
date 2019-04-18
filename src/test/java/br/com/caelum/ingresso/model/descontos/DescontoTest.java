@@ -12,7 +12,7 @@ import br.com.caelum.ingresso.model.Ingresso;
 import br.com.caelum.ingresso.model.Lugar;
 import br.com.caelum.ingresso.model.Sala;
 import br.com.caelum.ingresso.model.Sessao;
-import br.com.caelum.ingresso.model.TipoDeDesconto;
+import br.com.caelum.ingresso.model.TipoDeIngresso;
 
 
 public class DescontoTest {
@@ -23,7 +23,7 @@ public class DescontoTest {
 		Sala sala = new Sala("Sala 4D", new BigDecimal("15.00"));
 		Filme filme = new  Filme("Titanic", Duration.ofMinutes(120), "Drama", new BigDecimal("25.00"));
 		Sessao sessao = new Sessao(LocalTime.of(10, 00), sala, filme);
-		Ingresso ingresso = new Ingresso(sessao, TipoDeDesconto.ESTUDANTE, lugar);
+		Ingresso ingresso = new Ingresso(sessao, TipoDeIngresso.ESTUDANTE, lugar);
 		
 		BigDecimal precoEsperadoDoIngresso = new BigDecimal("20.00");
 		Assert.assertEquals(precoEsperadoDoIngresso, ingresso.getPreco());

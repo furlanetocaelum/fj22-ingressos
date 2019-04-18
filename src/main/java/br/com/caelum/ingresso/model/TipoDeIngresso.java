@@ -6,14 +6,14 @@ import br.com.caelum.ingresso.model.descontos.Desconto;
 import br.com.caelum.ingresso.model.descontos.DescontoParaEstudantes;
 import br.com.caelum.ingresso.model.descontos.SemDesconto;
 
-public enum TipoDeDesconto {
+public enum TipoDeIngresso {
 
 	INTEIRA(new SemDesconto()), 
 	ESTUDANTE(new DescontoParaEstudantes());
 
 	private Desconto desconto;
 
-	TipoDeDesconto(Desconto desconto) {
+	TipoDeIngresso(Desconto desconto) {
 		this.desconto = desconto;
 	}
 

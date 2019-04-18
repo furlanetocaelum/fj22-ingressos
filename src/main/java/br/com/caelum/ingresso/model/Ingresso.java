@@ -23,7 +23,7 @@ public class Ingresso {
 	private BigDecimal preco;
 
 	@Enumerated(EnumType.STRING)
-	private TipoDeDesconto tipoDeDesconto;
+	private TipoDeIngresso tipoDeIngresso;
 
 	@ManyToOne
 	private Lugar lugar;
@@ -35,10 +35,10 @@ public class Ingresso {
 
 	}
 
-	public Ingresso(Sessao sessao, TipoDeDesconto tipoDeDesconto, Lugar lugar) {
+	public Ingresso(Sessao sessao, TipoDeIngresso tipoDeIngresso, Lugar lugar) {
 		this.sessao = sessao;
-		this.tipoDeDesconto = tipoDeDesconto;
-		this.preco = this.tipoDeDesconto.aplicaDesconto(sessao.getPreco());
+		this.tipoDeIngresso = tipoDeIngresso;
+		this.preco = this.tipoDeIngresso.aplicaDesconto(sessao.getPreco());
 		this.lugar = lugar;
 	}
 
@@ -66,12 +66,12 @@ public class Ingresso {
 		this.preco = preco;
 	}
 
-	public TipoDeDesconto getTipoDeDesconto() {
-		return tipoDeDesconto;
+	public TipoDeIngresso getTipoDeIngresso() {
+		return tipoDeIngresso;
 	}
 
-	public void setTipoDeDesconto(TipoDeDesconto tipoDeDesconto) {
-		this.tipoDeDesconto = tipoDeDesconto;
+	public void setTipoDeIngresso(TipoDeIngresso tipoDeIngresso) {
+		this.tipoDeIngresso = tipoDeIngresso;
 	}
 
 	public Lugar getLugar() {
